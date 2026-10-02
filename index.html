@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherivelle — A Special Boyfriend Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="confetti" aria-hidden="true"></div>
+  <main id="app">
+    <section id="intro" class="screen active">
+      <div class="paper-card intro-card">
+        <span class="sticker">♡</span>
+        <p class="eyebrow">A little surprise</p>
+        <h1>Cherivelle</h1>
+        <p class="subline">Something special is waiting for you.</p>
+        <div class="bow">🎀</div>
+        <button class="primary" data-action="open-envelope">Click to Begin ♡</button>
+      </div>
+    </section>
+
+    <section id="unlock" class="screen">
+      <div class="paper-card unlock-card">
+        <button class="back" data-action="back-intro">←</button>
+        <div class="envelope" data-action="open-envelope-visual">💌</div>
+        <p class="eyebrow">Open me</p>
+        <h2>Enter our special date</h2>
+        <p class="hint">A date that means something to us ♡</p>
+        <div id="pin" class="pin">••••</div>
+        <div class="keypad" aria-label="Date keypad">
+          <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+          <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+          <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+          <button data-key="clear">⌫</button><button data-key="0">0</button><button data-key="submit">↗</button>
+        </div>
+        <p id="unlock-status" class="status"></p>
+      </div>
+    </section>
+
+    <section id="welcome" class="screen">
+      <div class="paper-card welcome-card">
+        <div class="bear">🐰</div>
+        <p class="eyebrow">You made it!</p>
+        <h2>Hiii, My Love! 💗</h2>
+        <p>I’m so glad you’re here.<br/>I made a little world just for you.</p>
+        <button class="primary" data-action="enter-room">Let’s Begin →</button>
+      </div>
+    </section>
+
+    <section id="room" class="screen room-screen">
+      <header class="room-header">
+        <div><span class="tiny">A tiny world made for</span><h2>YOU ♡</h2></div>
+        <button class="music" data-action="toggle-music">♫</button>
+      </header>
+      <p class="room-prompt">Tap anything that catches your eye ✨</p>
+      <div class="room-grid">
+
+  <button class="object gift" data-open="gift">
+    <span>🎁</span>
+    <small>Gift</small>
+  </button>
+
+  <button class="object letter" data-open="letter">
+    <span>💌</span>
+    <small>Letter</small>
+  </button>
+
+  <button class="object memories" data-open="memories">
+    <span>📸</span>
+    <small>Memories</small>
+  </button>
+
+  <button class="object award" data-open="award">
+    <span>🏆</span>
+    <small>Best BF Award</small>
+  </button>
+
+  <button class="object reasons" data-open="reasons">
+    <span>💗</span>
+    <small>Reasons</small>
+  </button>
+
+  <button class="object video" data-open="video">
+    <span>🎬</span>
+    <small>Message</small>
+  </button>
+
+</div>
+      <button class="mini" data-open="fun">✦ Open one more surprise ✦</button>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-action="close-modal"></div>
+    <article class="modal-card">
+      <button class="close" data-action="close-modal">×</button>
+      <div id="modal-content"></div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+
+<audio
+  id="bgMusic"
+  loop
+  preload="metadata"
+>
+  <source src="R-U-Mine_.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

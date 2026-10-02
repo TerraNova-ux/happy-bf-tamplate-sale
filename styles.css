@@ -1,0 +1,1207 @@
+:root {
+    --pink: #ef6f9f;
+    --deep: #4a2437;
+    --cream: #fff8f3;
+    --paper: #fffdf9;
+    --rose: #ffdce8;
+    --shadow: 0 22px 70px rgba(74, 36, 55, .18)
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--deep);
+    background: #1c1218
+}
+
+body {
+    overflow-x: hidden
+}
+
+.screen {
+    min-height: 100svh;
+    display: none;
+    place-items: center;
+    padding: 28px;
+    background: repeating-linear-gradient(90deg, #fff5f8 0 48px, #f9d9e5 48px 96px);
+    position: relative
+}
+
+.screen.active {
+    display: grid;
+    animation: fade .6s ease
+}
+
+.screen:before,
+.screen:after {
+    content: '♡  ✦  ♡';
+    position: absolute;
+    color: rgba(239, 111, 159, .45);
+    font-size: 26px;
+    letter-spacing: 20px;
+    pointer-events: none
+}
+
+.screen:before {
+    top: 8%;
+    left: 6%
+}
+
+.screen:after {
+    bottom: 8%;
+    right: 6%
+}
+
+.paper-card {
+    width: min(92vw, 520px);
+    padding: 38px 30px;
+    background: var(--paper);
+    border: 1px solid #f1d4df;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    transform: rotate(-.5deg)
+}
+
+.paper-card:before {
+    content: '';
+    position: absolute;
+    inset: 9px;
+    border: 1px dashed #e9b9c9;
+    border-radius: 6px;
+    pointer-events: none
+}
+
+.intro-card h1 {
+    font-family: Caveat, cursive;
+    font-size: clamp(72px, 17vw, 120px);
+    line-height: .75;
+    margin: 16px 0;
+    color: var(--pink);
+    text-shadow: 3px 4px 0 #fff
+}
+
+.eyebrow {
+    font-family: Caveat, cursive;
+    font-size: 27px;
+    margin: 0;
+    color: #9b5872
+}
+
+.subline,
+.hint {
+    font-size: 15px;
+    color: #7b5363
+}
+
+.sticker {
+    position: absolute;
+    right: 32px;
+    top: 26px;
+    font-size: 35px;
+    color: #ff789f
+}
+
+.bow {
+    font-size: 76px;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, .08));
+    margin: 8px
+}
+
+.primary {
+    border: 0;
+    background: var(--pink);
+    color: white;
+    border-radius: 999px;
+    padding: 14px 25px;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 10px 24px rgba(239, 111, 159, .3);
+    cursor: pointer;
+    transition: .2s
+}
+
+.primary:hover {
+    transform: translateY(-2px) scale(1.02)
+}
+
+.back,
+.close,
+.music {
+    border: 0;
+    background: transparent;
+    color: var(--pink);
+    font-size: 24px;
+    cursor: pointer
+}
+
+.back {
+    position: absolute;
+    left: 25px;
+    top: 22px
+}
+
+.unlock-card h2,
+.welcome-card h2 {
+    font-family: Caveat, cursive;
+    font-size: 48px;
+    margin: 5px 0 0
+}
+
+.envelope {
+    font-size: 80px;
+    cursor: pointer;
+    transition: .3s
+}
+
+.envelope:hover {
+    transform: rotate(-5deg) scale(1.06)
+}
+
+.pin {
+    font-family: monospace;
+    letter-spacing: 10px;
+    font-size: 26px;
+    margin: 14px
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    max-width: 270px;
+    margin: 18px auto
+}
+
+.keypad button {
+    border: 1px solid #f0d1dc;
+    background: #fff;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 18px;
+    color: var(--deep);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(74, 36, 55, .06)
+}
+
+.keypad button:hover {
+    background: #ffeaf1
+}
+
+.status {
+    min-height: 20px;
+    color: #d4517e;
+    font-size: 13px
+}
+
+.bear {
+    font-size: 90px
+}
+
+.room-screen {
+    display.room-screen {
+        display: none;
+    }
+
+    padding:34px max(18px, 4vw);
+    background:radial-gradient(circle at 20% 10%, #fff 0 4%, transparent 5%),
+    repeating-linear-gradient(90deg, #fff5f8 0 48px, #f9d9e5 48px 96px);
+}
+
+.room-header {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.room-header h2 {
+    font-family: Caveat, cursive;
+    color: var(--pink);
+    font-size: 48px;
+    margin: 0
+}
+
+.tiny {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9b5872
+}
+
+.music {
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 5px 18px rgba(74, 36, 55, .12)
+}
+
+.room-prompt {
+    text-align: center;
+    font-family: Caveat, cursive;
+    font-size: 24px;
+    margin: 10px 0 28px
+}
+
+.room-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.object {
+    min-height: 170px;
+    border: 1px solid #ecc8d5;
+    border-radius: 18px;
+    background: rgba(255, 253, 249, .9);
+    box-shadow: 0 14px 35px rgba(74, 36, 55, .12);
+    cursor: pointer;
+    color: var(--deep);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: .25s;
+    position: relative;
+    overflow: hidden
+}
+
+.object:after {
+    content: '✦';
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    color: #ef6f9f;
+    opacity: .7
+}
+
+.object span {
+    font-size: 64px;
+    transition: .3s
+}
+
+.object small {
+    font-weight: 700;
+    font-size: 13px
+}
+
+.object:hover {
+    transform: translateY(-7px) rotate(-1deg);
+    box-shadow: 0 20px 42px rgba(74, 36, 55, .17)
+}
+
+.object:hover span {
+    transform: scale(1.12) rotate(4deg)
+}
+
+.mini {
+    display: block;
+    margin: 28px auto 0;
+    border: 1px dashed #df91ad;
+    background: transparent;
+    color: #9b5872;
+    border-radius: 999px;
+    padding: 10px 18px;
+    cursor: pointer
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    place-items: center;
+    padding: 20px
+}
+
+.modal.open {
+    display: grid
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(34, 18, 27, .66);
+    backdrop-filter: blur(6px)
+}
+
+.modal-card {
+    position: relative;
+    width: min(92vw, 650px);
+    max-height: 90svh;
+    overflow: auto;
+    background: #fffaf7;
+    border-radius: 16px;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, .35);
+    padding: 38px 30px;
+    z-index: 1;
+    background-image: linear-gradient(rgba(255, 255, 255, .55), rgba(255, 255, 255, .55)), repeating-linear-gradient(90deg, #fff7fa 0 45px, #ffe7ef 45px 90px)
+}
+
+.close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 30px;
+    z-index: 2
+}
+
+.modal-card h3 {
+    font-family: Caveat, cursive;
+    color: var(--pink);
+    font-size: 54px;
+    margin: 5px 0 14px;
+    text-align: center
+}
+
+.modal-card p {
+    line-height: 1.7
+}
+
+.letter-paper,
+.award-paper {
+    background: #fffdf5;
+    border: 1px solid #e7cfaa;
+    padding: 30px;
+    box-shadow: 0 12px 25px rgba(74, 36, 55, .1);
+    transform: rotate(-1deg)
+}
+
+.letter-paper p {
+    font-family: Caveat, cursive;
+    font-size: 25px
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px
+}
+
+.photo {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f7b8cc, #ffe8d7);
+    border: 10px solid white;
+    box-shadow: 0 8px 20px rgba(74, 36, 55, .14);
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    transform: rotate(var(--r))
+}
+
+.award-paper {
+    text-align: center;
+    border: 5px double #d7b36c
+}
+
+.award-paper h4 {
+    font-family: Caveat, cursive;
+    font-size: 52px;
+    margin: 4px;
+    color: #c66a8d
+}
+
+.reasons {
+    min-height: 0
+}
+
+.reason-list {
+    list-style: none;
+    padding: 0
+}
+
+.reason-list li {
+    background: #fff;
+    border-radius: 12px;
+    margin: 9px 0;
+    padding: 12px 15px
+}
+
+.video-box {
+    aspect-ratio: 16/9;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #7b4059, #f49bbb);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 64px
+}
+
+.final {
+    text-align: center
+}
+
+.final .cake {
+    font-size: 90px
+}
+
+.final h3 {
+    font-size: 68px
+}
+
+.confetti-piece {
+    position: fixed;
+    top: -20px;
+    width: 9px;
+    height: 14px;
+    z-index: 30;
+    animation: fall 1.8s linear forwards
+}
+
+@keyframes fall {
+    to {
+        transform: translate3d(var(--x), 110vh, 0) rotate(650deg);
+        opacity: 0
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(12px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@media(max-width:650px) {
+    .room-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px
+    }
+
+    .object {
+        min-height: 140px
+    }
+
+    .object span {
+        font-size: 52px
+    }
+
+    .room-header h2 {
+        font-size: 40px
+    }
+
+    .paper-card {
+        padding: 34px 20px
+    }
+
+    .modal-card {
+        padding: 34px 18px
+    }
+
+    .final h3 {
+        font-size: 52px
+    }
+}
+
+@media(max-width:420px) {
+    .room-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .object {
+        min-height: 125px
+    }
+
+    .object span {
+        font-size: 44px
+    }
+
+    .object small {
+        font-size: 12px
+    }
+}
+
+/* ===== CHERIVELLE INTERACTIVE ROOM ===== */
+
+.room-grid {
+    width: min(900px, 92vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.object {
+    appearance: none;
+    -webkit-appearance: none;
+    min-height: 175px;
+    width: 100%;
+
+    border: 1px solid #ecc8d5 !important;
+    border-radius: 20px !important;
+
+    background: rgba(255, 253, 249, 0.96) !important;
+
+    box-shadow:
+        0 12px 30px rgba(74, 36, 55, 0.10),
+        0 3px 8px rgba(239, 111, 159, 0.08);
+
+    color: #4a2437 !important;
+
+    cursor: pointer;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 20px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+/* little sparkle */
+
+.object::after {
+    content: "✦";
+
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    color: #ef6f9f;
+    font-size: 18px;
+
+    opacity: 0.7;
+}
+
+/* icon */
+
+.object span {
+    display: block;
+
+    font-size: 62px;
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+/* label */
+
+.object small {
+    display: block;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #4a2437;
+}
+
+/* hover */
+
+.object:hover {
+    transform: translateY(-7px) rotate(-1deg);
+
+    background: #fff !important;
+
+    box-shadow:
+        0 20px 45px rgba(74, 36, 55, 0.16),
+        0 5px 15px rgba(239, 111, 159, 0.12);
+}
+
+.object:hover span {
+    transform: scale(1.12) rotate(4deg);
+
+    filter: drop-shadow(0 5px 8px rgba(239, 111, 159, 0.18));
+}
+
+/* click */
+
+.object:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* surprise button */
+
+.mini {
+    display: block;
+
+    margin: 30px auto 0;
+
+    border: 1px dashed #df91ad;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    color: #9b5872;
+
+    border-radius: 999px;
+
+    padding: 11px 20px;
+
+    font-family: "DM Sans", sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.mini:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* mobile */
+
+@media (max-width: 650px) {
+
+    .room-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .object {
+        min-height: 145px;
+    }
+
+    .object span {
+        font-size: 50px;
+    }
+
+    .object small {
+        font-size: 12px;
+    }
+}
+
+/* ===== COMPACT SURPRISE MODAL ===== */
+
+.modal-content {
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: 85vh;
+    padding-bottom: 28px !important;
+}
+
+.modal-body {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+}
+
+.modal-content .fun-content,
+.modal-content .modal-actions {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/* Keep the buttons grouped tightly */
+.modal-content .primary {
+    margin-bottom: 12px;
+}
+
+.modal-content .primary:last-child {
+    margin-bottom: 0;
+}
+
+.screen.room-screen.active {
+    display: block;
+}
+/* =========================================================
+   CHERIVELLE — iOS / ANDROID / TABLET RESPONSIVE
+   Desktop layout remains untouched
+   ========================================================= */
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 1024px) {
+
+  .screen {
+    padding:
+      max(24px, env(safe-area-inset-top))
+      24px
+      max(24px, env(safe-area-inset-bottom));
+  }
+
+  .room-screen {
+    padding:
+      max(28px, env(safe-area-inset-top))
+      28px
+      max(28px, env(safe-area-inset-bottom));
+  }
+
+  .room-grid {
+    width: min(760px, 92vw);
+    gap: 18px;
+  }
+
+  .object {
+    min-height: 155px;
+  }
+
+  .object span {
+    font-size: 58px;
+  }
+
+  .modal-card {
+    width: min(90vw, 620px);
+    max-height: 88svh;
+  }
+}
+
+
+/* ---------- PHONES ---------- */
+
+@media (max-width: 650px) {
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .screen {
+    min-height: 100svh;
+    min-height: 100dvh;
+
+    padding:
+      max(18px, env(safe-area-inset-top))
+      16px
+      max(22px, env(safe-area-inset-bottom))
+      16px;
+  }
+
+
+  /* INTRO */
+
+  .paper-card {
+    width: min(94vw, 430px);
+    padding: 34px 20px;
+  }
+
+  .intro-card h1 {
+    font-size: clamp(70px, 22vw, 100px);
+  }
+
+  .eyebrow {
+    font-size: 23px;
+  }
+
+  .primary {
+    min-height: 48px;
+    padding: 13px 22px;
+    font-size: 15px;
+  }
+
+
+  /* UNLOCK */
+
+  .unlock-card h2,
+  .welcome-card h2 {
+    font-size: clamp(38px, 11vw, 48px);
+  }
+
+  .envelope {
+    font-size: 70px;
+  }
+
+  .keypad {
+    width: min(280px, 82vw);
+    gap: 10px;
+  }
+
+  .keypad button {
+    min-height: 50px;
+    padding: 12px;
+    font-size: 17px;
+
+    /* better touch target */
+    touch-action: manipulation;
+  }
+
+
+  /* ROOM */
+
+  .room-screen {
+    padding:
+      max(24px, env(safe-area-inset-top))
+      14px
+      max(28px, env(safe-area-inset-bottom));
+  }
+
+  .room-header {
+    width: 100%;
+  }
+
+  .room-header h2 {
+    font-size: 40px;
+  }
+
+  .tiny {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .music {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .room-prompt {
+    font-size: 21px;
+    margin: 14px 0 24px;
+  }
+
+  .room-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .object {
+    width: 100%;
+    min-height: 145px;
+
+    padding: 14px 8px;
+
+    border-radius: 18px;
+
+    /* removes accidental mobile tap highlight */
+    -webkit-tap-highlight-color: transparent;
+
+    touch-action: manipulation;
+  }
+
+  .object span {
+    font-size: 48px;
+  }
+
+  .object small {
+    font-size: 12px;
+  }
+
+  .object:active {
+    transform: scale(.96);
+  }
+
+  .mini {
+    min-height: 46px;
+    margin-top: 20px;
+    padding: 11px 17px;
+
+    touch-action: manipulation;
+  }
+
+
+  /* MODALS */
+
+  .modal {
+    padding:
+      max(12px, env(safe-area-inset-top))
+      12px
+      max(12px, env(safe-area-inset-bottom));
+  }
+
+  .modal-card {
+    width: 100%;
+    max-width: 500px;
+
+    max-height: 88svh;
+    max-height: 88dvh;
+
+    padding:
+      34px 18px
+      max(24px, env(safe-area-inset-bottom));
+
+    border-radius: 20px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-card h3 {
+    font-size: clamp(40px, 12vw, 54px);
+    line-height: 1;
+    padding: 0 18px;
+  }
+
+  .close {
+    top: 10px;
+    right: 12px;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 28px;
+
+    touch-action: manipulation;
+  }
+
+  .modal-card .primary {
+    width: 100%;
+    min-height: 48px;
+  }
+
+
+  /* MEMORIES */
+
+  .photos {
+    gap: 10px;
+  }
+
+  .photo {
+    border-width: 7px;
+    font-size: 34px;
+  }
+
+
+  /* LETTER */
+
+  .letter-paper {
+    padding: 22px 18px;
+  }
+
+  .letter-paper p {
+    font-size: 22px;
+  }
+
+
+  /* AWARD */
+
+  .award-paper {
+    padding: 22px 15px;
+  }
+
+  .award-paper h4 {
+    font-size: 44px;
+  }
+
+
+  /* FINAL */
+
+  .final .cake {
+    font-size: 72px;
+  }
+
+  .final h3 {
+    font-size: clamp(45px, 13vw, 62px);
+    line-height: 1;
+  }
+
+  .final p {
+    font-size: 15px;
+  }
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+
+  .room-grid {
+    gap: 9px;
+  }
+
+  .object {
+    min-height: 130px;
+  }
+
+  .object span {
+    font-size: 42px;
+  }
+
+  .object small {
+    font-size: 11px;
+  }
+
+  .room-prompt {
+    font-size: 19px;
+  }
+
+  .modal-card {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+
+/* ---------- LANDSCAPE PHONES ---------- */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .screen {
+    min-height: 100dvh;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .paper-card {
+    padding: 20px;
+  }
+
+  .intro-card h1 {
+    font-size: 65px;
+  }
+
+  .room-grid {
+    max-width: 700px;
+  }
+
+  .object {
+    min-height: 115px;
+  }
+
+  .modal-card {
+    max-height: 92dvh;
+  }
+}
+
+
+/* ---------- TOUCH DEVICES ---------- */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .object:hover,
+  .primary:hover,
+  .mini:hover {
+    transform: none;
+  }
+
+  .object:active {
+    transform: scale(.96);
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+/* =========================================================
+   CHERIVELLE — TABLET / iPAD COMPOSITION
+   ========================================================= */
+
+@media (min-width: 651px) and (max-width: 1100px) {
+
+  .screen.room-screen.active {
+    display: grid !important;
+
+    min-height: 100dvh;
+
+    padding:
+      max(30px, env(safe-area-inset-top))
+      40px
+      max(30px, env(safe-area-inset-bottom));
+
+    /*
+      Keep the complete composition together
+      instead of stretching it across the screen.
+    */
+    align-content: center;
+    justify-items: center;
+
+    row-gap: 18px;
+  }
+
+  .room-header {
+    width: min(760px, 90vw);
+    margin: 0;
+  }
+
+  .room-header h2 {
+    font-size: 52px;
+  }
+
+  .room-prompt {
+    margin: 0 0 8px;
+    font-size: 25px;
+  }
+
+  .room-grid {
+    width: min(760px, 90vw);
+    margin: 0;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+  }
+
+  .object {
+    min-height: 165px;
+  }
+
+  .object span {
+    font-size: 60px;
+  }
+
+  .object small {
+    font-size: 14px;
+  }
+
+  .mini {
+    margin: 2px 0 0;
+  }
+}
+/* ===== MOBILE ROOM HEADER FIX ===== */
+
+@media (max-width: 650px) {
+
+  .room-header {
+    width: 100%;
+    padding-top: 14px;
+    margin-bottom: 6px;
+  }
+
+  .room-header > div {
+    min-width: 0;
+  }
+
+  .room-header h2 {
+    margin-top: 4px;
+    line-height: 1;
+  }
+
+  .room-prompt {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 650px) {
+
+  .room-screen {
+    overflow: hidden;
+  }
+
+  .room-header {
+    position: relative;
+    z-index: 5;
+  }
+
+  .room-header h2,
+  .room-header .tiny {
+    position: relative;
+    z-index: 6;
+  }
+
+  .room-prompt {
+    position: relative;
+    z-index: 5;
+  }
+}
